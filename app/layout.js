@@ -1,3 +1,24 @@
+export default function RootLayout({ children }) {
+  return (
+    <html lang="es">
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        {/* Banner para la prueba de entorno efímero */}
+        <div style={{
+          backgroundColor: '#3b82f6',
+          color: 'white',
+          textAlign: 'center',
+          padding: '8px',
+          fontWeight: 'bold',
+          fontSize: '14px'
+        }}>
+          🚀 Entorno Efímero de Prueba (PR Activo) - Agenda de Citas
+        </div>
+        {children}
+      </body>
+    </html>
+  );
+}
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
